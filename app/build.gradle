@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.laioffer.spotify'
+    namespace 'com.yuhan.spotify'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.laioffer.spotify"
+        applicationId "com.yuhan.spotify"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -81,8 +81,13 @@ dependencies {
 
 
     // navigation
-
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     // retrofit
+    def retrofitVersion = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
 
     // hilt injection
 
